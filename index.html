@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Camera App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Live Camera</h1>
+    <p>Look into your camera and click capture to take a snapshot.</p>
+
+    <!-- Live video feed from the camera -->
+    <video id="video" autoplay playsinline muted></video>
+
+    <!-- Button to trigger capture -->
+    <button id="capture-btn">Capture</button>
+
+    <!-- Area where captured photo appears -->
+    <h2>Captured Photo</h2>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
