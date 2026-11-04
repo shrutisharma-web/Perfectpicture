@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +9,25 @@
 </head>
 <body>
   <div class="card">
-    <h1>Live Camera</h1>
-    <p>Look into your camera and click capture to take a snapshot.</p>
+    <h1>Camera App</h1>
+    <p id="instruction">Look into your camera and click capture.</p>
 
-    <!-- Live video feed from the camera -->
-    <video id="video" autoplay playsinline muted></video>
+    <!-- Media container: video and canvas occupy the exact same spot -->
+    <div class="media-container">
+      <video id="video" autoplay playsinline muted></video>
+      <canvas id="canvas" class="hidden"></canvas>
+    </div>
 
-    <!-- Button to trigger capture -->
-    <button id="capture-btn">Capture</button>
+    <!-- Initial Capture button -->
+    <div id="capture-controls">
+      <button id="capture-btn" class="btn btn-primary">Capture</button>
+    </div>
 
-    <!-- Area where captured photo appears -->
-    <h2>Captured Photo</h2>
-    <canvas id="canvas"></canvas>
+    <!-- Post-capture action buttons: Retake and Keep -->
+    <div id="review-controls" class="btn-group hidden">
+      <button id="retake-btn" class="btn btn-secondary">Retake</button>
+      <button id="keep-btn" class="btn btn-success">Keep</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
